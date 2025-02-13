@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap in Columns</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<!-- Vertical alignment -->
+<div>
+    <p> <strong>Vertical alignment</strong> </p>
+</div>
+<div class="container overflow-hidden">
+    <div class="row align-items-start mb-3" style="height: 70px; background-color: gray;">
+        <div class="col">
+            One of three columns lorem
+        </div>
+        <div class="col">
+            One of three columns lorem
+        </div>
+        <div class="col">
+            One of three columns lorem
+        </div>
+    </div>
+    <div class="row align-items-center mb-3" style="height: 70px; background-color: aqua;">
+        <div class="col">
+            One of three columns lorem
+        </div>
+        <div class="col">
+            One of three columns lorem
+        </div>
+        <div class="col">
+            One of three columns lorem
+        </div>
+    </div>
+    <div class="row align-items-end mb-3" style="height: 70px; background-color: blue;">
+        <div class="col">
+            One of three columns lorem
+        </div>
+        <div class="col">
+            One of three columns lorem
+        </div>
+        <div class="col">
+            One of three columns lorem
+        </div>
+    </div>
+</div>
+<hr>
+
+<!-- Horizontal alignment -->
+<div>
+    <p> <strong> Horizontal alignment </strong> </p>
+</div>
+<div class="container h-20">
+    <div class="row justify-content-start text-light" style="height: 70px; background-color: darkred;">
+        <div class="col-4">
+            One of two columns 01
+        </div>
+        <div class="col-4">
+            One of two columns 02
+        </div>
+    </div>
+    <div class="row justify-content-center text-light" style="height: 70px; background-color: aqua;">
+        <div class="col-4">
+            One of two columns 03
+        </div>
+        <div class="col-4">
+            One of two columns 04
+        </div>
+    </div>
+    <div class="row justify-content-end text-light" style="height: 70px; background-color: green;">
+        <div class="col-4">
+            One of two columns 05
+        </div>
+        <div class="col-4">
+            One of two columns 06
+        </div>
+    </div>
+    <div class="row justify-content-around text-light" style="height: 70px; background-color: blue;">
+        <div class="col-4">
+            One of two columns 07
+        </div>
+        <div class="col-4">
+            One of two columns 08
+        </div>
+    </div>
+    <div class="row justify-content-between text-light" style="height: 70px; background-color: gray;">
+        <div class="col-4">
+            One of two columns 09
+        </div>
+        <div class="col-4">
+            One of two columns 10
+        </div>
+    </div>
+    <div class="row justify-content-evenly text-light" style="height: 70px; background-color: darkred;">
+        <div class="col-4">
+            One of two columns 11
+        </div>
+        <div class="col-4">
+            One of two columns 12
+        </div>
+    </div>
+</div>
+<hr>
+
+<!-- Column wrapping -->
+<div>
+    <p> <strong> Column wrapping </strong> </p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-9">.col-9</div>
+        <div class="col-4">.col-4 Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as
+            one contiguous unit.</div>
+        <div class="col-6">.col-6 Subsequent columns continue along the new line.</div>
+    </div>
+</div>
+
+<!-- Column breaks -->
+<div>
+    <p> <strong> Column breaks </strong> </p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3  ">.col-6 .col-sm-3</div>
+
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+    </div>
+</div>
+<hr>
+
+<!-- Reordering -->
+<div>
+    <p> <strong> Reordering </strong> </p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col order-third">
+            First in DOM, ordered last
+        </div>
+        <div class="col">
+            Second in DOM, unordered
+        </div>
+        <div class="col order-first">
+            Third in DOM, ordered first
+        </div>
+    </div>
+</div>
+<hr>
+
+<!-- Offset classes -->
+<div>
+    <p> <strong> Offset classes </strong> </p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">.col-md-4 01</div>
+        <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4 02</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3 03</div>
+        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3 04</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3 05</div>
+    </div>
+</div>
+<hr>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

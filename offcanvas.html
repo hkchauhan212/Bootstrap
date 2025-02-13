@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap in Offcanvas</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<!-- This example is w3school -->
+	<div>
+		<p>This example is w3schools</p>
+	</div>
+	<div class="offcanvas offcanvas-start" id="demo">
+		<div class="offcanvas-header">
+			<h1 class="offcanvas-title">Heading</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+		</div>
+		<div class="offcanvas-body">
+			<p>Some text here..</p>
+			<p>Some text here..</p>
+			<p>Some text here..</p>
+			<button class="btn btn-primary" type="button">A button</button>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-3">
+		<h3>Offcanvas sidebar</h3>
+		<p>Offcanvas is similar to modals, except that it is often used as a sidebar.</p>
+		<button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#demo">Open offcanvas
+			Sidebar</button>
+	</div>
+	<br>
+	<hr><br>
+
+	<!-- Bootstrap Throw This example -->
+	<div>
+		<p>This offcanvas is Bootstrap Example</p>
+	</div>
+	<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"> Link with href </a>
+	<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
+		Button with data-bs-target
+	</button>
+
+	<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+			<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			<div>
+				Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
+				lists, etc.
+			</div>
+			<div class="dropdown mt-3">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+					data-bs-toggle="dropdown">
+					Dropdown button
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<li><a class="dropdown-item" href="#">Action</a></li>
+					<li><a class="dropdown-item" href="#">Another action</a></li>
+					<li><a class="dropdown-item" href="#">Something else here</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<br>
+	<hr><br>
+
+
+	<!-- Backdrop -->
+	<div>
+		<p>Backdrop</p>
+		<p>Scrolling the body element is disabled when an offcanvas and its backdrop are visible. Use the data-bs-scroll
+			attribute to toggle body scrolling and data-bs-backdrop to toggle the backdrop.</p>
+	</div>
+	<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+		aria-controls="offcanvasScrolling">Enable body scrolling</button>
+	<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop"
+		aria-controls="offcanvasWithBackdrop">Enable backdrop (default)</button>
+	<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+		aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+
+	<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+		id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasScrollingLabel">Colored with scrolling</h5>
+			<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			<p>Try scrolling the rest of the page to see this option in action.</p>
+		</div>
+	</div>
+	<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
+		aria-labelledby="offcanvasWithBackdropLabel">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
+			<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			<p>.....</p>
+		</div>
+	</div>
+	<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+		aria-labelledby="offcanvasWithBothOptionsLabel">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+			<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			<p>Try scrolling the rest of the page to see this option in action.</p>
+		</div>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
